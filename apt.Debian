@@ -1,0 +1,4 @@
+git curl make
+code meld doxygen clang-format
+g++ gdb cmake
+erlang rebar3
