@@ -1,2 +1,2 @@
 .PHONY: sync
-sync: doc
+sync: doxy
