@@ -1,1 +1,2 @@
-NIF Interface Module
+% NIF Interface Module
+-module(nif).
