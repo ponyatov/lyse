@@ -16,6 +16,24 @@
             "problemMatcher" : []
         },
         {
+            "label"          : "rebar3: auto",
+            "type"           : "shell",
+            "command"        : "rebar3 auto",
+            // "dependsOn"      : "CMake: build",
+            "problemMatcher" : [],
+            "presentation"   : {"showReuseMessage": true, "focus": true, "reveal": "silent", "close": false},
+            "group"          : {"kind": "build", "isDefault": true}
+        },
+        {
+            "label"          : "rebar3: shell",
+            "type"           : "shell",
+            "command"        : "rebar3 shell",
+            // "dependsOn"      : "CMake: build",
+            "problemMatcher" : [],
+            "presentation"   : {"showReuseMessage": true, "focus": true, "reveal": "silent", "close": false},
+            "group"          : {"kind": "build", "isDefault": true}
+        },
+        {
             "label"          : "rebar3: compile",
             "type"           : "shell",
             "command"        : "rebar3 compile",
