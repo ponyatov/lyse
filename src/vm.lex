@@ -6,8 +6,10 @@
 %option noyywrap yylineno
 
 %%
-%[^\n]*     {}  // line comment
+"%%"[^\n]*  {}  // line comment
 [ \t\r\n]+  {}  // drop spaces
+
+"module"    {return MODULE;}
 
 [0-9]+              {yylval.n = atoi(yytext);            return INT ;}
 [a-z_][a-z_0-9]*    {yylval.s = new std::string(yytext); return ATOM;}

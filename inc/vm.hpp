@@ -29,7 +29,7 @@ class Object {
     Object();
     Object(std::string *V);
     virtual ~Object();
-    virtual std::string tag();
+    virtual std::string tag() const;
     virtual std::string val();
     std::string head();
     std::string dump();

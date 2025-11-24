@@ -32,7 +32,15 @@ Object::~Object() { assert(!ref); }
 std::string Object::dump() { return head(); }
 std::string Object::head() { return tag() + ':' + val(); }
 
-std::string Object::tag() { return "tag"; }
 std::string Object::val() { return value; }
+
+#include <cxxabi.h>
+
+std::string Object::tag() const {
+    std::string ret =
+        abi::__cxa_demangle(typeid(*this).name(), NULL, NULL, nullptr);
+    for (char &c : ret) c = tolower(c);
+    return ret;
+}
 
 Module::Module(std::string *V) : Object(V) {}

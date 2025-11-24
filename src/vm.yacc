@@ -21,6 +21,6 @@ ex  : CHAR  { std::clog <<  "char:" <<  $1 << '\n'; }
     | COMMA { std::clog << "comma:" <<  $1 << '\n'; }
     | ATOM  { std::clog <<  "atom:" << *$1 << '\n'; }
     | INT   { std::clog <<   "int:" <<  $1 << '\n'; }
-    | module { std::clog << $1->dump() << '\n'; }
+    | module { std::clog << $1->dump() << '\n'; exit(0); }
 
 module: LC MODULE COMMA ATOM RC DOT { $$ = new Module($4); }
