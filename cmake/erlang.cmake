@@ -12,6 +12,6 @@ foreach(ERL_FILE ${ERL})
         DEPENDS             ${ERL_FILE}
         WORKING_DIRECTORY   ${CMAKE_SOURCE_DIR}
         COMMAND             erlc
-        ARGS                -o ${BEAM_FILE} ${ERL_FILE}
+        ARGS                -o ${CMAKE_SOURCE_DIR}/lib ${ERL_FILE}
     )
 endforeach()

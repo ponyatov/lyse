@@ -18,6 +18,7 @@
         // parser
         "daohong-emilio.yash",
         "rreverser.ragel",
+        "fudgepops.kaitai-struct-vscode",
         // Erlang
         "pgourlain.erlang",
     ]
