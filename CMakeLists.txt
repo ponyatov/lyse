@@ -21,7 +21,7 @@ add_executable(${CMAKE_PROJECT_NAME}
     ${C}  ${H}          # C/C++ source
     ${S}  ${LD}         # embedded/lowlevel
     ${CP} ${HP}         # parsers
-    ${BEAM}             # precompiled binary data
+    ${DATA}             # precompiled binary data
 )
 
 include(install) # target install
