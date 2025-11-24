@@ -11,3 +11,10 @@ int main(int argc, char *argv[]) {  //
 void arg(int argc, char *argv) {  //
     std::clog << "arg[" << argc << "] = <" << argv << ">\n";
 }
+
+void yyerror(const char *msg) {  //
+    std::cerr << "\n\n"
+              << yyfile << ':' << yylineno << ' ' << msg << " [" << yytext
+              << "]\n\n";
+    exit(-1);
+}
