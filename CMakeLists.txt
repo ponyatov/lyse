@@ -4,7 +4,6 @@ project(${CMAKE_PROJECT_NAME} VERSION 0.0.1 LANGUAGES C CXX ASM)
 
 include(version)  # binary files naming by version & git branch/hash
 include(src)      # scan project for source code files
-include(kaitai)   # binary parsers
 include(erlang)   # erlang VM jigs
 
 message("-- |")
@@ -14,7 +13,6 @@ message("-- |    target: " "hw:" ${HW} " cpu:" ${CPU} " arch:" ${ARCH} " os:" ${
 message("-- |   startup: " "${S}")
 message("-- |    linker: " "${LD}")
 message("-- |    binary: " "${CMAKE_INSTALL_PREFIX}/${BIN_OUTPUT_NAME}${CMAKE_EXECUTABLE_SUFFIX}")
-message("-- |    kaitai: " "${KSY}")
 message("-- |    erlang: " "${ERL} -> ${BEAM}")
 message("-- |")
 
