@@ -1,5 +1,7 @@
-{application, lyse ,[
+{application, lyse, [
     {description, "Learn You Some Erlang"},
-    {vsn,"0.0.1"},
-    {applications,[kernel,stdlib]}
+    {vsn, "0.0.1"},
+    {mod, {app, []}, {sup, []}},
+    {applications, [kernel, stdlib]},
+    {licenses, ["MIT"]}
 ]}.
